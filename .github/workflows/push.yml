@@ -15,7 +15,6 @@ jobs:
       - name: Build
         run: yarn build
   release:
-    needs: release
     name: Release
     runs-on: ubuntu-latest
     steps:
