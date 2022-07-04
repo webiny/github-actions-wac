@@ -2,6 +2,7 @@
   "name": "github-actions-wac",
   "version": "1.0.0",
   "main": "index.js",
+  "description": "GitHub Actions - Workflows as Code (WaC).",
   "repository": "git@github.com:doitadrian/github-actions-wac.git",
   "author": "Adrian Smijulj <adrian1358@gmail.com>",
   "license": "MIT",

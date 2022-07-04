@@ -1,11 +1,11 @@
-# `@webiny/api-wcp`
+# `github-actions-wac`
 
-[![](https://img.shields.io/npm/dw/@webiny/api-wcp.svg)](https://www.npmjs.com/package/@webiny/api-wcp)
-[![](https://img.shields.io/npm/v/@webiny/api-wcp.svg)](https://www.npmjs.com/package/@webiny/api-wcp)
+[![](https://img.shields.io/npm/dw/github-actions-wac.svg)](https://www.npmjs.com/package/github-actions-wac)
+[![](https://img.shields.io/npm/v/github-actions-wac.svg)](https://www.npmjs.com/package/github-actions-wac)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-A set of backend Webiny Control Panel (WCP)-related features.
+GitHub Actions - Workflows as Code (WaC).
 
 ## Table of Contents
 
@@ -20,18 +20,18 @@ A set of backend Webiny Control Panel (WCP)-related features.
 ## Installation
 
 ```
-npm install --save @webiny/api-wcp
+npm install --save github-actions-wac
 ```
 
 Or if you prefer yarn:
 
 ```
-yarn add @webiny/api-wcp
+yarn add github-actions-wac
 ```
 
 ## Overview
 
-The `@webiny/api-wcp` package contains essential backend Webiny Control Panel (WCP)-related utilities.
+The `github-actions-wac` package contains essential backend Webiny Control Panel (WCP)-related utilities.
 
 ## Examples
 
@@ -60,7 +60,7 @@ Creates the WCP context API.
 
 ```ts
 import { createHandler } from "@webiny/handler-aws";
-import { createWcpContext } from "@webiny/api-wcp";
+import { createWcpContext } from "github-actions-wac";
 
 export const handler = createHandler({
   plugins: [
@@ -88,7 +88,7 @@ Returns WCP API URL. The default URL can be overridden via the `WCP_API_URL` env
 
 ```ts
 import { createHandler } from "@webiny/handler-aws";
-import { createWcpGraphQL } from "@webiny/api-wcp";
+import { createWcpGraphQL } from "github-actions-wac";
 
 export const handler = createHandler({
     plugins: [
