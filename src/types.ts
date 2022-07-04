@@ -5,5 +5,5 @@ export interface Workflow {
     jobs: Record<string, Job>;
 }
 
-export type Job = { steps: Step[], 'runs-on': string, };
+export type Job = { name: string; steps: Step[]; "runs-on": string };
 export type Step = Record<string, any>;
