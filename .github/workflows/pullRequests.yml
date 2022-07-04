@@ -1,5 +1,5 @@
-name: v5 Branch - Push
-'on': push
+name: Push to main branch
+'on': pull_request
 env:
   NODE_OPTIONS: '--max_old_space_size=4096'
 jobs:
@@ -7,17 +7,11 @@ jobs:
     name: Build and test
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: 12
-      - uses: actions/checkout@v2a
+          node-version: 14
       - name: Build
         run: yarn build
-  release:
-    needs: release
-    name: Release
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 12
+      - name: Test
+        run: echo 'yarn test'
