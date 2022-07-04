@@ -5,12 +5,20 @@ const defaultEnv = {
     NODE_OPTIONS: "--max_old_space_size=4096"
 };
 
-const checkoutBuildTest: Step[] = [
-    { uses: "actions/checkout@v2" },
+const checkoutInstallBuildTest: Step[] = [
     {
         uses: "actions/setup-node@v2",
         with: { "node-version": 14 }
     },
+    { uses: "actions/checkout@v2" },
+    {
+        uses: "actions/cache@v2",
+        with: {
+            path: ".yarn/cache",
+            key: "yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}"
+        }
+    },
+    { name: "Install dependencies", run: "yarn --immutable" },
     { name: "Build", run: "yarn build" },
     { name: "Test", run: "echo 'yarn test'" }
 ];
@@ -24,7 +32,7 @@ export const push = createWorkflow({
             name: "Build, test, release",
             "runs-on": "ubuntu-latest",
             steps: [
-                ...checkoutBuildTest,
+                ...checkoutInstallBuildTest,
                 {
                     name: "Release",
                     run: "echo 'yarn test'"
@@ -42,7 +50,7 @@ export const pullRequests = createWorkflow({
         buildTest: {
             name: "Build and test",
             "runs-on": "ubuntu-latest",
-            steps: [...checkoutBuildTest]
+            steps: [...checkoutInstallBuildTest]
         }
     }
 });

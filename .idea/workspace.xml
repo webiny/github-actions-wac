@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce00e18c-c1e8-46ef-b506-2efcc96dce65" name="Changes" comment="chore: init commit">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/index.wac.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/compile.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/pullRequests.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/push.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/index.wac.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/index.wac.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pullRequests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pullRequests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/push.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/push.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/build.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/watch.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +83,7 @@
       <workItem from="1656680849480" duration="562000" />
       <workItem from="1656688407172" duration="682000" />
       <workItem from="1656690427610" duration="2369000" />
-      <workItem from="1656926950521" duration="4583000" />
+      <workItem from="1656926950521" duration="4965000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit">
       <created>1656690553053</created>
@@ -113,7 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656695830219</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="chore: init commit">
+      <created>1656932678745</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1656932678745</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: init commit">
+      <created>1656932716921</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656932716921</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
