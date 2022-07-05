@@ -34,7 +34,11 @@ export const push = createWorkflow({
                 ...checkoutInstallBuildTest,
                 {
                     name: "Release",
-                    run: "echo 'yarn test'"
+                    uses: "cycjimmy/semantic-release-action@v3",
+                    env: {
+                        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}",
+                        NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
+                    }
                 }
             ]
         }

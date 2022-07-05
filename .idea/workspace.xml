@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce00e18c-c1e8-46ef-b506-2efcc96dce65" name="Changes" comment="chore: init commit">
-      <change afterPath="$PROJECT_DIR$/scripts/generateGithubActionsWorkflowTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/githubActionsWorkflow.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/index.wac.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/index.wac.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pullRequests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pullRequests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/push.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/push.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/compile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/build.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/watch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/watch.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createWorkflow.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/createWorkflow.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/build.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/build.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +41,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -101,7 +95,7 @@
       <workItem from="1656690427610" duration="2369000" />
       <workItem from="1656926950521" duration="5248000" />
       <workItem from="1657012060470" duration="2200000" />
-      <workItem from="1657035400627" duration="792000" />
+      <workItem from="1657035400627" duration="2404000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit">
       <created>1656690553053</created>
@@ -159,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656933334395</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="chore: init commit">
+      <created>1657036204417</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657036204417</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

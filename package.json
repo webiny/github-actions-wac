@@ -33,8 +33,9 @@
   },
   "bin": "bin.js",
   "scripts": {
-    "build": "swc src -d dist --source-maps --extensions '.ts'",
+    "build": "rm -rf dist && swc src -d dist --source-maps --extensions '.ts'",
     "watch": "swc src -d dist --source-maps --extensions '.ts' --watch",
+    "prepublishOnly": "cp README.md dist/README.md && cp package.json dist/package.json",
     "generate-gh-actions-workflow-types": "ts-node scripts/generateGithubActionsWorkflowTypes.ts",
     "github-actions-wac": "node dist/bin.js",
     "ghawac": "node dist/bin.js",
