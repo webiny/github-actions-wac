@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce00e18c-c1e8-46ef-b506-2efcc96dce65" name="Changes" comment="chore: init commit">
+    <list default="true" id="ce00e18c-c1e8-46ef-b506-2efcc96dce65" name="Changes" comment="fix: correct &quot;bin&quot; property">
       <change beforePath="$PROJECT_DIR$/.github/workflows/index.wac.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/index.wac.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/pullRequests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pullRequests.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/push.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/push.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/build.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/build.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +38,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -95,7 +92,7 @@
       <workItem from="1656690427610" duration="2369000" />
       <workItem from="1656926950521" duration="5248000" />
       <workItem from="1657012060470" duration="2200000" />
-      <workItem from="1657035400627" duration="2404000" />
+      <workItem from="1657035400627" duration="3056000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit">
       <created>1656690553053</created>
@@ -160,7 +157,35 @@
       <option name="project" value="LOCAL" />
       <updated>1657036204417</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="chore: init commit">
+      <created>1657037923788</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657037923788</updated>
+    </task>
+    <task id="LOCAL-00011" summary="chore: init commit">
+      <created>1657038034987</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1657038034987</updated>
+    </task>
+    <task id="LOCAL-00012" summary="chore: init commit">
+      <created>1657038218754</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1657038218754</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix: correct &quot;bin&quot; property">
+      <created>1657038698290</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657038698290</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +207,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="chore: init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: init commit" />
+    <MESSAGE value="fix: correct &quot;bin&quot; property" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: correct &quot;bin&quot; property" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

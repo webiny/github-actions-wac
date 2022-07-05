@@ -35,6 +35,7 @@ export const push = createWorkflow({
                 {
                     name: "Release",
                     uses: "cycjimmy/semantic-release-action@v3",
+                    with: { "working-directory": "./dist" },
                     env: {
                         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}",
                         NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
