@@ -1,11 +1,10 @@
-import { createWorkflow } from "../../src";
-import { Step } from "../../src/types";
+import { createWorkflow, NormalJob } from "../../src";
 
 const defaultEnv = {
     NODE_OPTIONS: "--max_old_space_size=4096"
 };
 
-const checkoutInstallBuildTest: Step[] = [
+const checkoutInstallBuildTest: NormalJob["steps"] = [
     {
         uses: "actions/setup-node@v2",
         with: { "node-version": 14 }

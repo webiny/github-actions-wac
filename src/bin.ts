@@ -1,16 +1,19 @@
 #!/usr/bin/env node
+import * as tsNode from "ts-node";
 import * as yargs from "yargs";
-import { compile } from "./commands/compile";
+import { build } from "./commands/build";
 import { watch } from "./commands/watch";
+
+tsNode.register({ dir: process.cwd() });
 
 yargs
     .scriptName("github-actions-wac")
     .usage("$0 <cmd> [args]")
     .command(
-        "compile",
-        `Compiles YAML from detected TypeScript ("*.wac.ts") workflow files.`,
+        "build",
+        `Builds YAML from detected TypeScript ("*.wac.ts") workflow files.`,
         {},
-        compile
+        build
     )
     .command(
         "watch",

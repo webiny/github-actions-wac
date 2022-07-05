@@ -1,4 +1,3 @@
-import * as tsNode from "ts-node";
 import * as fs from "fs";
 import * as path from "path";
 import jsYaml from "js-yaml";
@@ -7,11 +6,10 @@ import { getWorkflowsPaths, clearImportCache } from "./utils";
 
 const log = debug("ghawac");
 
-tsNode.register({ dir: process.cwd() });
 
 const relativePath = p => path.relative(process.cwd(), p);
 
-export const compile = async () => {
+export const build = async () => {
     const workflowFilesPaths = getWorkflowsPaths();
     log(
         "Detected following workflow files:\n",
@@ -36,5 +34,5 @@ export const compile = async () => {
     // above dynamic imports will always just returned cached imported objects and no change will happen.
     clearImportCache();
 
-    console.log("Successfully compiled.");
+    console.log(`Successfully generated ${workflowFilesPaths.length} file(s).`);
 };
