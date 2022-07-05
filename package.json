@@ -31,7 +31,10 @@
   "peerDependencies": {
     "typescript": "^4.0.0"
   },
-  "bin": "bin.js",
+  "bin": {
+    "github-actions-wac": "./bin.js",
+    "ghawac": "./bin.js"
+  },
   "scripts": {
     "build": "rm -rf dist && swc src -d dist --source-maps --extensions '.ts'",
     "watch": "swc src -d dist --source-maps --extensions '.ts' --watch",
