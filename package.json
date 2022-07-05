@@ -40,5 +40,8 @@
     "github-actions-wac": "node dist/bin.js",
     "ghawac": "node dist/bin.js",
     "test": "jest"
+  },
+  "release": {
+    "branches": ["main"]
   }
 }
