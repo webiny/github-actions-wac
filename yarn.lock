@@ -2546,7 +2546,8 @@ __metadata:
   peerDependencies:
     typescript: ^4.0.0
   bin:
-    github-actions-wac: bin.js
+    ghawac: ./bin.js
+    github-actions-wac: ./bin.js
   languageName: unknown
   linkType: soft
 
