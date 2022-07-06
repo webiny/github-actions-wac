@@ -32,10 +32,13 @@ export const push = createWorkflow({
             "runs-on": "ubuntu-latest",
             steps: [
                 ...checkoutInstallBuildTest,
+                { name: "Test", run: "ls -alh" },
+                { name: "Test", run: "ls -alh", "working-directory": "dist" },
+
                 {
                     name: "Release",
                     uses: "cycjimmy/semantic-release-action@v3",
-                    "working-directory": "./dist",
+                    with: { working_directory: "./dist" },
                     env: {
                         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}",
                         NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
