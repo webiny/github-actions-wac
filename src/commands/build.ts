@@ -3,6 +3,7 @@ import * as path from "path";
 import jsYaml from "js-yaml";
 import debug from "debug";
 import { getWorkflowsPaths, clearImportCache } from "./utils";
+import * as tsNode from "ts-node";
 
 const log = debug("ghawac");
 
@@ -15,7 +16,20 @@ const TOP_YAML_WORKFLOW_COMMENT = [
     '# For more information, run "github-actions-wac --help".'
 ].join("\n");
 
+let tsNodeRegistered = false;
+const registerTsNode = (options = {}) => {
+    if (tsNodeRegistered) {
+        return;
+    }
+
+    tsNode.register({...options });
+    tsNodeRegistered = true;
+};
+
 export const build = async () => {
+
+    registerTsNode();
+
     const workflowFilesPaths = getWorkflowsPaths();
     log(
         "Detected following workflow files:\n",

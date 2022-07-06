@@ -1,10 +1,7 @@
 #!/usr/bin/env node
-import * as tsNode from "ts-node";
 import * as yargs from "yargs";
 import { build } from "./commands/build";
 import { watch } from "./commands/watch";
-
-tsNode.register({ dir: process.cwd() });
 
 yargs
     .scriptName("github-actions-wac")
