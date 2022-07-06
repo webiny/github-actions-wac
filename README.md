@@ -31,7 +31,7 @@ yarn add github-actions-wac
 
 ## Overview
 
-The `github-actions-wac` package contains essential backend Webiny Control Panel (WCP)-related utilities.
+The `github-actions-wac` package enables you to define your GitHub Actions workflows as TypeScript code.
 
 ## Examples
 
