@@ -36,7 +36,7 @@
     "github-actions-wac": "./bin.js"
   },
   "scripts": {
-    "build": "rm -rf dist && swc src -d dist --source-maps --extensions '.ts' && tsc ./src/**/*.ts --outDir dist --declaration --noEmit",
+    "build": "rm -rf dist && swc src -d dist --source-maps --extensions '.ts' && tsc ./src/**/*.ts --outDir dist --declaration --emitDeclarationOnly",
     "watch": "swc src -d dist --source-maps --extensions '.ts' --watch",
     "prepare-dist-for-release": "cp README.md dist/README.md && cp package.json dist/package.json",
     "generate-gh-actions-workflow-types": "ts-node scripts/generateGithubActionsWorkflowTypes.ts",
