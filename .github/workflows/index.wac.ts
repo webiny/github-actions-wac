@@ -32,9 +32,7 @@ export const push = createWorkflow({
             "runs-on": "ubuntu-latest",
             steps: [
                 ...checkoutInstallBuildTest,
-                { name: "Test", run: "ls -alh" },
-                { name: "Test", run: "ls -alh", "working-directory": "dist" },
-
+                { name: "Prepare for release", run: "yarn prepare-dist-for-release" },
                 {
                     name: "Release",
                     uses: "cycjimmy/semantic-release-action@v3",
