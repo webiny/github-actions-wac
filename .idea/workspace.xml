@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce00e18c-c1e8-46ef-b506-2efcc96dce65" name="Changes" comment="fix: correct &quot;bin&quot; property">
+    <list default="true" id="ce00e18c-c1e8-46ef-b506-2efcc96dce65" name="Changes" comment="ci: implement semantic release">
       <change beforePath="$PROJECT_DIR$/.github/workflows/index.wac.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/index.wac.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/push.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/push.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schema.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,8 @@
       <workItem from="1656690427610" duration="2369000" />
       <workItem from="1656926950521" duration="5248000" />
       <workItem from="1657012060470" duration="2200000" />
-      <workItem from="1657035400627" duration="3056000" />
+      <workItem from="1657035400627" duration="4681000" />
+      <workItem from="1657084368835" duration="1138000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit">
       <created>1656690553053</created>
@@ -185,7 +188,49 @@
       <option name="project" value="LOCAL" />
       <updated>1657038698290</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ci: update working directory">
+      <created>1657038802148</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657038802148</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix: update bin prop">
+      <created>1657041432179</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1657041432179</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix: update bin prop">
+      <created>1657044306180</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1657044306180</updated>
+    </task>
+    <task id="LOCAL-00017" summary="chore: update ignore">
+      <created>1657084975437</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1657084975437</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ci: update working dir">
+      <created>1657085073606</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1657085073606</updated>
+    </task>
+    <task id="LOCAL-00019" summary="ci: implement semantic release">
+      <created>1657085218773</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1657085218773</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +253,12 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="chore: init commit" />
     <MESSAGE value="fix: correct &quot;bin&quot; property" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: correct &quot;bin&quot; property" />
+    <MESSAGE value="ci: update working directory" />
+    <MESSAGE value="fix: update bin prop" />
+    <MESSAGE value="chore: update ignore" />
+    <MESSAGE value="ci: update working dir" />
+    <MESSAGE value="ci: implement semantic release" />
+    <option name="LAST_COMMIT_MESSAGE" value="ci: implement semantic release" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
