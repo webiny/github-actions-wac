@@ -1,7 +1,7 @@
 import * as glob from "fast-glob";
 
 export const getWorkflowsPaths = () => {
-    const workflowFilesGlobs = [[process.cwd(), ".github", "workflows", "*.wac.ts"].join("/")];
+    const workflowFilesGlobs = [[process.cwd(), ".github", "workflows", "**/*.wac.ts"].join("/")];
 
     return glob.sync(workflowFilesGlobs, { onlyFiles: true });
 };
