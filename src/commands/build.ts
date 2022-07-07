@@ -36,6 +36,7 @@ export const build = async () => {
         workflowFilesPaths.map(item => `-> ${relativePath(item)}`).join("\n")
     );
 
+    let builtFilesCount = 0;
     for (let i = 0; i < workflowFilesPaths.length; i++) {
         const tsWorkflowPath = workflowFilesPaths[i];
         const exportedWorkflows = await import(tsWorkflowPath);
@@ -47,6 +48,7 @@ export const build = async () => {
             log("%s", `\n${content}`);
 
             fs.writeFileSync(yamlWorkflowPath, [TOP_YAML_WORKFLOW_COMMENT, content].join("\n"));
+            builtFilesCount++;
         }
     }
 
@@ -54,5 +56,5 @@ export const build = async () => {
     // above dynamic imports will always just returned cached imported objects and no change will happen.
     clearImportCache();
 
-    console.log(`Successfully generated ${workflowFilesPaths.length} file(s).`);
+    console.log(`Successfully built ${builtFilesCount} file(s).`);
 };
