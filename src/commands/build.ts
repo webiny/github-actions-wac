@@ -22,12 +22,11 @@ const registerTsNode = (options = {}) => {
         return;
     }
 
-    tsNode.register({...options });
+    tsNode.register({ ...options });
     tsNodeRegistered = true;
 };
 
 export const build = async () => {
-
     registerTsNode();
 
     const workflowFilesPaths = getWorkflowsPaths();
@@ -41,7 +40,7 @@ export const build = async () => {
         const tsWorkflowPath = workflowFilesPaths[i];
         const exportedWorkflows = await import(tsWorkflowPath);
         for (const name in exportedWorkflows) {
-            const yamlWorkflowPath = path.join(path.dirname(tsWorkflowPath), `${name}.yml`);
+            const yamlWorkflowPath = path.join(".github", "workflows", `${name}.yml`);
             log(`Writing to ${relativePath(yamlWorkflowPath)}:`);
 
             const content = jsYaml.dump(exportedWorkflows[name]);
