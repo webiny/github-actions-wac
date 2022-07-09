@@ -107,7 +107,7 @@ export const pullRequests = createWorkflow({
 });
 ```
 
-Once you're done, in your terminal, simply run the `yarn github-actions-wac build` (or `yarn ghawac build`) CLI command to emit your TypeScript code as regular YAML files. For example, if we were to build the above example, we'd end up with two YAML files: `push.yml` and `pullRequests.yml`.
+Once you're done, in your terminal, simply run the `yarn github-actions-wac build` (or `yarn ghawac build`) CLI command to emit regular YAML files. For example, if we were to build the above example, we'd end up with two YAML files: `push.yml` and `pullRequests.yml`.
 
 > The `yarn github-actions-wac build` commands detects all exported workflows from `.wac.ts` files and emits a standalone YAML file for each one.
 
@@ -115,11 +115,11 @@ Once you're done, in your terminal, simply run the `yarn github-actions-wac buil
 
 ## Why Create GitHub Actions via Code?
 
-Creating GitHub Actions workflows via code has a couple of benefits:
+Creating GitHub Actions workflows 1 has a couple of benefits:
 
 - no need to write YAML (sorry 😅)
 - type safety - the `yarn github-actions-wac build` command will throw TypeScript errors if something is wrong
-- no need to copy/paste dozens of lines of YAML - simply store all of your repetitive jobs/steps into variables (or even as factory functions if additional dynamicity is required)
+- no need to copy/paste dozens of lines of YAML - simply store all of your repetitive jobs/steps as variables (or even as factory functions if additional dynamicity is required)
 - it's even possible to import external NPM modules if needed (although, personally I haven't had the need to do it yet)
 
 ## Examples
