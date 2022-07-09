@@ -174,8 +174,6 @@ yarn github-actions-wac
 
 > You can also run `npx github-actions-wac --help` for in-terminal reference.
 
-The following are the commands that the CLI exposes.
-
 #### `build`
 
 Builds YAML from detected TypeScript (`.wac.ts`) workflow files.
