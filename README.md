@@ -162,11 +162,11 @@ export const push = createWorkflow({
 
 This package includes a small CLI that can be invoked via `npx` or `yarn`:
 
-```
-// Using npx:
+```bash
+# Using npx:
 npx github-actions-wac`
 
-// Using yarn: 
+# Using yarn: 
 yarn github-actions-wac
 ```
 
