@@ -115,7 +115,7 @@ Once you're done, in your terminal, simply run the `yarn github-actions-wac buil
 
 ## Why Create GitHub Actions via Code?
 
-Creating GitHub Actions workflows 1 has a couple of benefits:
+Creating GitHub Actions workflows has a couple of benefits:
 
 - no need to write YAML (sorry 😅)
 - type safety - the `yarn github-actions-wac build` command will throw TypeScript errors if something is wrong
