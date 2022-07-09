@@ -15,7 +15,10 @@ GitHub Actions - Workflows as Code (WaC).
 - [Reference](#reference)
   - [Functions](#functions)
     - [`createWorkflow`](#createWorkflow)
-
+  - [CLI Commands](#functions)
+      - [`build`](#build)
+      - [`watch`](#watch)
+      - 
 ## Installation
 
 ```
@@ -102,7 +105,11 @@ export const pullRequests = createWorkflow({
 });
 ```
 
-Once you're done, in your terminal, simply run `yarn github-actions-wac build` (or `yarn ghawac build`), to emit your TypeScript code into regular YAML files.
+Once you're done, in your terminal, simply run the `yarn github-actions-wac build` (or `yarn ghawac build`) CLI command to emit your TypeScript code as regular YAML files. For example, if we were to build the above example, we'd end up with two YAML files: `push.yml` and `pullRequests.yml`. 
+
+> The ``yarn github-actions-wac build`` commands detects all exported workflows from `wac.ts` files and emits a standalone YAML file for each one.
+
+> It's up to you to decide whether you want a single `*.wac.ts` file that exports all workflows, or multiple files where each exports a single workflow.
 
 Writing GitHub Actions workflows via TypeScript has a couple of benefits:
 
