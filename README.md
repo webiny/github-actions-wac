@@ -172,6 +172,8 @@ yarn github-actions-wac
 
 > Instead of `github-actions-wac`, you can also use `ghawac` to invoke the CLI. For example: `npx ghawac` (`yarn ghawac`).
 
+> You can also run `yarn github-actions-wac --help` for in-terminal reference.
+
 The following are the commands that the CLI exposes.
 
 #### `build`
