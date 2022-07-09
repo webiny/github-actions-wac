@@ -118,7 +118,7 @@ Once you're done, in your terminal, simply run the `yarn github-actions-wac buil
 Creating GitHub Actions workflows has a couple of benefits:
 
 - if you don't like YAML in general, then this might be a more favorable approach
-- type safety - the `yarn github-actions-wac build` command will throw TypeScript errors if something is wrong
+- type safety - the mentioned `yarn github-actions-wac build` CLI command will throw TypeScript errors if something is wrong
 - no need to copy/paste dozens of lines of YAML - simply store all of your repetitive jobs/steps as variables (or even as factory functions if additional dynamicity is required)
 - it's even possible to import external NPM modules if needed (although, personally I haven't had the need to do it yet)
 
