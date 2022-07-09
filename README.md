@@ -38,6 +38,8 @@ The `github-actions-wac` package enables you to create your GitHub Actions workf
 To get started, simply create a new `.wac.ts` file in your `.github/workflows` folder and start creating your GitHub Actions workflow. For example:
 
 ```ts
+// .github/workflows/index.wac.ts
+
 import { createWorkflow, NormalJob } from "github-actions-wac";
 
 // Some global environment variables.
