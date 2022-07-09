@@ -14,34 +14,35 @@ GitHub Actions - Workflows as Code (WaC).
 - [Examples](#examples)
 - [Reference](#reference)
   - [Functions](#functions)
-    - [`createWcpContext`](#getWcpAppUrl)
-    - [`createWcpGraphQL`](#getWcpApiUrl)
+    - [`createWorkflow`](#createWorkflow)
 
 ## Installation
 
 ```
-npm install --save github-actions-wac
+npm install --save github-actions-wac --dev
 ```
 
 Or if you prefer yarn:
 
 ```
-yarn add github-actions-wac
+yarn add github-actions-wac --dev
 ```
 
 ## Overview
 
-The `github-actions-wac` package enables you to define your GitHub Actions workflows as TypeScript code.
+The `github-actions-wac` package enables you to define your GitHub Actions workflows via TypeScript code.
 
 To get started, simply create a new `.wac.ts` TypeScript file in your `.github/workflows` folder and start defining your GitHub Actions workflow. For example:
 
 ```ts
 import { createWorkflow, NormalJob } from "github-actions-wac";
 
+// Some global environment variables.
 const defaultEnv = {
   NODE_OPTIONS: "--max_old_space_size=4096"
 };
 
+// Let's assign some of the common steps into a standalone const.
 const checkoutInstallBuildTest: NormalJob["steps"] = [
   {
     uses: "actions/setup-node@v2",
@@ -60,6 +61,7 @@ const checkoutInstallBuildTest: NormalJob["steps"] = [
   { name: "Test", run: "echo 'yarn test'" }
 ];
 
+// Define "Push to main branch" workflow.
 export const push = createWorkflow({
   name: "Push to main branch",
   on: "push",
@@ -85,8 +87,9 @@ export const push = createWorkflow({
   }
 });
 
+// Define "Pull requests" workflow.
 export const pullRequests = createWorkflow({
-  name: "Push to main branch",
+  name: "Pull requests",
   on: "pull_request",
   env: defaultEnv,
   jobs: {
