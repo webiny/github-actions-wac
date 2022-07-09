@@ -13,9 +13,9 @@ GitHub Actions - Workflows as Code (WaC).
 - [Overview](#overview)
 - [Examples](#examples)
 - [Reference](#reference)
-    - [Functions](#functions)
-        - [`createWcpContext`](#getWcpAppUrl)
-        - [`createWcpGraphQL`](#getWcpApiUrl)
+  - [Functions](#functions)
+    - [`createWcpContext`](#getWcpAppUrl)
+    - [`createWcpGraphQL`](#getWcpApiUrl)
 
 ## Installation
 
@@ -39,129 +39,115 @@ To get started, simply create a new `.wac.ts` TypeScript file in your `.github/w
 import { createWorkflow, NormalJob } from "github-actions-wac";
 
 const defaultEnv = {
-    NODE_OPTIONS: "--max_old_space_size=4096"
+  NODE_OPTIONS: "--max_old_space_size=4096"
 };
 
 const checkoutInstallBuildTest: NormalJob["steps"] = [
-    {
-        uses: "actions/setup-node@v2",
-        with: { "node-version": 14 }
-    },
-    { uses: "actions/checkout@v2" },
-    {
-        uses: "actions/cache@v2",
-        with: {
-            path: ".yarn/cache",
-            key: "yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}"
-        }
-    },
-    { name: "Install dependencies", run: "yarn --immutable" },
-    { name: "Build", run: "yarn build" },
-    { name: "Test", run: "echo 'yarn test'" }
+  {
+    uses: "actions/setup-node@v2",
+    with: { "node-version": 14 }
+  },
+  { uses: "actions/checkout@v2" },
+  {
+    uses: "actions/cache@v2",
+    with: {
+      path: ".yarn/cache",
+      key: "yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}"
+    }
+  },
+  { name: "Install dependencies", run: "yarn --immutable" },
+  { name: "Build", run: "yarn build" },
+  { name: "Test", run: "echo 'yarn test'" }
 ];
 
 export const push = createWorkflow({
-    name: "Push to main branch",
-    on: "push",
-    env: defaultEnv,
-    jobs: {
-        buildTestRelease: {
-            name: "Build, test, release",
-            "runs-on": "ubuntu-latest",
-            steps: [
-                ...checkoutInstallBuildTest,
-                { name: "Prepare for release", run: "yarn prepare-dist-for-release" },
-                {
-                    name: "Release",
-                    uses: "cycjimmy/semantic-release-action@v3",
-                    with: { working_directory: "./dist" },
-                    env: {
-                        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}",
-                        NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
-                    }
-                }
-            ]
+  name: "Push to main branch",
+  on: "push",
+  env: defaultEnv,
+  jobs: {
+    buildTestRelease: {
+      name: "Build, test, release",
+      "runs-on": "ubuntu-latest",
+      steps: [
+        ...checkoutInstallBuildTest,
+        { name: "Prepare for release", run: "yarn prepare-dist-for-release" },
+        {
+          name: "Release",
+          uses: "cycjimmy/semantic-release-action@v3",
+          with: { working_directory: "./dist" },
+          env: {
+            GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}",
+            NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
+          }
         }
+      ]
     }
+  }
 });
 
 export const pullRequests = createWorkflow({
-    name: "Push to main branch",
-    on: "pull_request",
-    env: defaultEnv,
-    jobs: {
-        buildTest: {
-            name: "Build and test",
-            "runs-on": "ubuntu-latest",
-            steps: [...checkoutInstallBuildTest]
-        }
+  name: "Push to main branch",
+  on: "pull_request",
+  env: defaultEnv,
+  jobs: {
+    buildTest: {
+      name: "Build and test",
+      "runs-on": "ubuntu-latest",
+      steps: [...checkoutInstallBuildTest]
     }
+  }
 });
-
 ```
+
+Once you're done, in your terminal, simply run `yarn github-actions-wac build` (or `yarn ghawac build`), to emit your TypeScript code into regular YAML files.
+
+Writing GitHub Actions workflows via TypeScript has a couple of benefits:
+
+- no need to write YAML (sorry 😅)
+- type safety - the `yarn github-actions-wac build` command will throw TypeScript errors if something is wrong
+- no need to copy/paste dozens of lines of YAML - simply store all of your repetitive jobs/steps into variables (or even as factory functions if additional dynamicity is required)
+- it's even possible to import external NPM modules if needed (although, personally I haven't had the need to do it yet)
 
 ## Examples
 
-| Example                                                     | Description                                                   |
-| ----------------------------------------------------------- | ------------------------------------------------------------- |
+| Example                                                      | Description                                                                 |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | [Registering Plugins](./docs/examples/registeringPlugins.md) | Shows how to register relevant plugins in a [handler function](../handler). |
 
 ## Reference
 
 ### Functions
 
-#### `createWcpContext`
+#### `createWorkflow`
 
 <details>
 <summary>Type Declaration</summary>
 <p>
 
 ```ts
-export declare const createWcpContext: () => ContextPlugin<WcpContext>;
+export declare const createWorkflow: (workflow: Workflow) => Workflow;
 ```
 
 </p>
 </details>
 
-Creates the WCP context API.
+Defines a new GitHub Actions workflow. Accepts a `Workflow` object.
 
 ```ts
-import { createHandler } from "@webiny/handler-aws";
-import { createWcpContext } from "github-actions-wac";
-
-export const handler = createHandler({
-  plugins: [
-    // Registers WCP context API.  
-    createWcpContext(),
-    // ...
-  ]
+export const push = createWorkflow({
+    name: "Push to main branch",
+    on: "push",
+    env: defaultEnv,
+    jobs: { ... }
 });
 ```
 
-#### `createWcpGraphQL`
+### CLI Commands
 
-<details>
-<summary>Type Declaration</summary>
-<p>
+#### `build`
 
-```ts
-export declare const createWcpGraphQL: () => GraphQLSchemaPlugin<WcpContext>;
-```
+Builds YAML from detected TypeScript ("*.wac.ts") workflow files.
 
-</p>
-</details>
+#### `watch`
 
-Returns WCP API URL. The default URL can be overridden via the `WCP_API_URL` environment variable.
-
-```ts
-import { createHandler } from "@webiny/handler-aws";
-import { createWcpGraphQL } from "github-actions-wac";
-
-export const handler = createHandler({
-    plugins: [
-        // Registers WCP context API.  
-        createWcpGraphQL(),
-        // ...
-    ]
-});
-```
+Watches for changes in detected TypeScript ("*.wac.ts") workflow files and automatically generates YAML.
