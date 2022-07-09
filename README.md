@@ -109,9 +109,9 @@ Once you're done, in your terminal, simply run the `yarn github-actions-wac buil
 
 > The `yarn github-actions-wac build` commands detects all exported workflows from `wac.ts` files and emits a standalone YAML file for each one.
 
-> It's up to you to decide whether you want a single `wac.ts` file that exports all workflows, or multiple files where each exports a single workflow.
+> It's up to you to decide whether you want a single `wac.ts` file that exports all workflows, or multiple `wac.ts` files where each exports a single workflow.
 
-## Why?
+## Why GitHub Actions Workflows as Code?
 
 Writing GitHub Actions workflows via TypeScript has a couple of benefits:
 
