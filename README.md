@@ -107,9 +107,9 @@ export const pullRequests = createWorkflow({
 });
 ```
 
-Once you're done, in your terminal, simply run the `yarn github-actions-wac build` (or `yarn ghawac build`) CLI command to emit regular YAML files. For example, if we were to build the above example, we'd end up with two YAML files: `push.yml` and `pullRequests.yml`.
+Once you're done, in your terminal, simply run the `npx github-actions-wac build` (or `npx ghawac build`) CLI command to emit regular YAML files. For example, if we were to build the above example, we'd end up with two YAML files: `push.yml` and `pullRequests.yml`.
 
-> The `yarn github-actions-wac build` commands detects all exported workflows from `.wac.ts` files and emits a standalone YAML file for each one.
+> The `npx github-actions-wac build` commands detects all exported workflows from `.wac.ts` files and emits a standalone YAML file for each one.
 
 > It's up to you to decide whether you want a single `.wac.ts` file that exports all workflows, or multiple `.wac.ts` files where each exports a single workflow.
 
@@ -118,7 +118,7 @@ Once you're done, in your terminal, simply run the `yarn github-actions-wac buil
 Creating GitHub Actions workflows has a couple of benefits:
 
 - if you don't like YAML in general, then this might be a more favorable approach
-- type safety - the mentioned `yarn github-actions-wac build` CLI command will throw TypeScript errors if something is wrong
+- type safety - the mentioned `npx github-actions-wac build` CLI command will throw TypeScript errors if something is wrong
 - no need to copy/paste dozens of lines of YAML - simply store all of your repetitive jobs/steps as variables (or even as factory functions if additional dynamicity is required)
 - it's even possible to import external NPM modules if needed (although, personally I haven't had the need to do it yet)
 
@@ -148,6 +148,8 @@ export declare const createWorkflow: (workflow: Workflow) => Workflow;
 Creates a new GitHub Actions workflow. Accepts a `Workflow` object.
 
 ```ts
+import { createWorkflow } from "github-actions-wac";
+
 export const push = createWorkflow({
     name: "Push to main branch",
     on: "push",
@@ -158,10 +160,32 @@ export const push = createWorkflow({
 
 ### CLI Commands
 
+This package includes a small CLI that can be invoked via `npx` or `yarn`:
+
+```
+// Using npx:
+npx github-actions-wac`
+
+// Using yarn: 
+yarn github-actions-wac
+```
+
+> Instead of `github-actions-wac`, you can also use `ghawac` to invoke the CLI. For example: `npx ghawac` (`yarn ghawac`).
+
+The following are the commands that the CLI exposes.
+
 #### `build`
 
-Builds YAML from detected TypeScript ("\*.wac.ts") workflow files.
+Builds YAML from detected TypeScript (`.wac.ts`) workflow files.
+
+```bash
+npx github-actions-wac build
+```
 
 #### `watch`
 
-Watches for changes in detected TypeScript ("\*.wac.ts") workflow files and automatically generates YAML.
+Watches for changes in detected TypeScript (`.wac.ts`) workflow files and automatically generates YAML.
+
+```bash
+npx github-actions-wac watch
+```
