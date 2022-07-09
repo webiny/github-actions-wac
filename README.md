@@ -164,7 +164,7 @@ This package includes a small CLI that can be invoked via `npx` or `yarn`:
 
 ```bash
 # Using npx:
-npx github-actions-wac`
+npx github-actions-wac
 
 # Using yarn: 
 yarn github-actions-wac
