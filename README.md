@@ -15,7 +15,7 @@ GitHub Actions - Workflows as Code (WaC).
 - [Reference](#reference)
   - [Functions](#functions)
     - [`createWorkflow`](#createWorkflow)
-  - [CLI Commands](#functions)
+  - [CLI](#cli)
     - [`build`](#build)
     - [`watch`](#watch)
 
@@ -158,7 +158,7 @@ export const push = createWorkflow({
 });
 ```
 
-### CLI Commands
+### CLI
 
 This package includes a small CLI that can be invoked via `npx` or `yarn`:
 
