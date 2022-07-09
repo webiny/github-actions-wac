@@ -33,9 +33,9 @@ yarn add github-actions-wac --dev
 
 ## Overview
 
-The `github-actions-wac` package enables you to define your GitHub Actions workflows via TypeScript code.
+The `github-actions-wac` package enables you to create your GitHub Actions workflows via TypeScript code.
 
-To get started, simply create a new `.wac.ts` TypeScript file in your `.github/workflows` folder and start defining your GitHub Actions workflow. For example:
+To get started, simply create a new `.wac.ts` file in your `.github/workflows` folder and start creating your GitHub Actions workflow. For example:
 
 ```ts
 import { createWorkflow, NormalJob } from "github-actions-wac";
@@ -64,7 +64,7 @@ const checkoutInstallBuildTest: NormalJob["steps"] = [
   { name: "Test", run: "echo 'yarn test'" }
 ];
 
-// Define "Push to main branch" workflow.
+// Create "Push to main branch" workflow.
 export const push = createWorkflow({
   name: "Push to main branch",
   on: "push",
@@ -90,7 +90,7 @@ export const push = createWorkflow({
   }
 });
 
-// Define "Pull requests" workflow.
+// Create "Pull requests" workflow.
 export const pullRequests = createWorkflow({
   name: "Pull requests",
   on: "pull_request",
@@ -111,9 +111,9 @@ Once you're done, in your terminal, simply run the `yarn github-actions-wac buil
 
 > It's up to you to decide whether you want a single `wac.ts` file that exports all workflows, or multiple `wac.ts` files where each exports a single workflow.
 
-## Why GitHub Actions Workflows as Code?
+## Why Create GitHub Actions via Code?
 
-Writing GitHub Actions workflows via TypeScript has a couple of benefits:
+Creating GitHub Actions workflows via code has a couple of benefits:
 
 - no need to write YAML (sorry 😅)
 - type safety - the `yarn github-actions-wac build` command will throw TypeScript errors if something is wrong
@@ -143,7 +143,7 @@ export declare const createWorkflow: (workflow: Workflow) => Workflow;
 </p>
 </details>
 
-Defines a new GitHub Actions workflow. Accepts a `Workflow` object.
+Creates a new GitHub Actions workflow. Accepts a `Workflow` object.
 
 ```ts
 export const push = createWorkflow({
