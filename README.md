@@ -16,9 +16,9 @@ GitHub Actions - Workflows as Code (WaC).
   - [Functions](#functions)
     - [`createWorkflow`](#createWorkflow)
   - [CLI Commands](#functions)
-      - [`build`](#build)
-      - [`watch`](#watch)
-      - 
+    - [`build`](#build)
+    - [`watch`](#watch)
+
 ## Installation
 
 ```
@@ -105,11 +105,13 @@ export const pullRequests = createWorkflow({
 });
 ```
 
-Once you're done, in your terminal, simply run the `yarn github-actions-wac build` (or `yarn ghawac build`) CLI command to emit your TypeScript code as regular YAML files. For example, if we were to build the above example, we'd end up with two YAML files: `push.yml` and `pullRequests.yml`. 
+Once you're done, in your terminal, simply run the `yarn github-actions-wac build` (or `yarn ghawac build`) CLI command to emit your TypeScript code as regular YAML files. For example, if we were to build the above example, we'd end up with two YAML files: `push.yml` and `pullRequests.yml`.
 
-> The ``yarn github-actions-wac build`` commands detects all exported workflows from `wac.ts` files and emits a standalone YAML file for each one.
+> The `yarn github-actions-wac build` commands detects all exported workflows from `wac.ts` files and emits a standalone YAML file for each one.
 
-> It's up to you to decide whether you want a single `*.wac.ts` file that exports all workflows, or multiple files where each exports a single workflow.
+> It's up to you to decide whether you want a single `wac.ts` file that exports all workflows, or multiple files where each exports a single workflow.
+
+## Why?
 
 Writing GitHub Actions workflows via TypeScript has a couple of benefits:
 
@@ -156,8 +158,8 @@ export const push = createWorkflow({
 
 #### `build`
 
-Builds YAML from detected TypeScript ("*.wac.ts") workflow files.
+Builds YAML from detected TypeScript ("\*.wac.ts") workflow files.
 
 #### `watch`
 
-Watches for changes in detected TypeScript ("*.wac.ts") workflow files and automatically generates YAML.
+Watches for changes in detected TypeScript ("\*.wac.ts") workflow files and automatically generates YAML.
