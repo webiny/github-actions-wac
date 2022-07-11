@@ -49,21 +49,9 @@ const defaultEnv = {
 
 // Let's assign some of the common steps into a standalone const.
 const checkoutInstallBuildTest: NormalJob["steps"] = [
-  {
-    uses: "actions/setup-node@v2",
-    with: { "node-version": 14 }
-  },
   { uses: "actions/checkout@v2" },
-  {
-    uses: "actions/cache@v2",
-    with: {
-      path: ".yarn/cache",
-      key: "yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}"
-    }
-  },
   { name: "Install dependencies", run: "yarn --immutable" },
-  { name: "Build", run: "yarn build" },
-  { name: "Test", run: "echo 'yarn test'" }
+  { name: "Build", run: "yarn build" }
 ];
 
 // Create "Push to main branch" workflow.
@@ -77,7 +65,6 @@ export const push = createWorkflow({
       "runs-on": "ubuntu-latest",
       steps: [
         ...checkoutInstallBuildTest,
-        { name: "Prepare for release", run: "yarn prepare-dist-for-release" },
         {
           name: "Release",
           uses: "cycjimmy/semantic-release-action@v3",
@@ -115,7 +102,7 @@ Once you're done, in your terminal, simply run the `npx github-actions-wac build
 
 ## Why Create GitHub Actions via Code?
 
-Creating GitHub Actions workflows has a couple of benefits:
+Creating GitHub Actions workflows via (TypeScript) code has a couple of benefits:
 
 - if you don't like YAML in general, then this might be a more favorable approach
 - type safety - the mentioned `npx github-actions-wac build` CLI command will throw TypeScript errors if something is wrong
@@ -126,7 +113,9 @@ Creating GitHub Actions workflows has a couple of benefits:
 
 | Example                                                      | Description                                                                 |
 | ------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| [Registering Plugins](./docs/examples/registeringPlugins.md) | Shows how to register relevant plugins in a [handler function](../handler). |
+| [Simple Workflow](./docs/examples/simpleWorkflow.md) | A simple workflow that consists of a couple of steps. |
+| [Exporting Multiple Workflow](./docs/examples/exportingMultipleWorkflows.md) | An example of defining multiple workflows in a single `.wac.ts` file. |
+| [Complex Workflow](./docs/examples/complexWorkflow.md) | A more complex workflow that consists of a multiple jobs and reusable steps. |
 
 ## Reference
 
