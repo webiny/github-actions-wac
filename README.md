@@ -113,9 +113,9 @@ Creating GitHub Actions workflows via (TypeScript) code has a couple of benefits
 
 | Example                                                      | Description                                                                 |
 | ------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| [Simple Workflow](./docs/examples/simpleWorkflow.md) | A simple workflow that consists of a couple of steps. |
-| [Exporting Multiple Workflow](./docs/examples/exportingMultipleWorkflows.md) | An example of defining multiple workflows in a single `.wac.ts` file. |
-| [Complex Workflow](./docs/examples/complexWorkflow.md) | A more complex workflow that consists of a multiple jobs and reusable steps. |
+| [Simple Workflow](./docs/examples/simpleWorkflow.md) | Exports a single workflow that consists of a couple of a single job and some steps. |
+| [Multiple Workflows](./docs/examples/multipleWorkflows.md) | Exports multiple workflows that consist of a single jobs and multiple steps. |
+| [Complex Example](./docs/examples/complexExample.md) | A more complex example that exports multiple branch-dependent workflows. |
 
 ## Reference
 
