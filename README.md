@@ -1,5 +1,9 @@
 # `github-actions-wac`
 
+<p align="center">
+  <img src="./docs/splash.png" width="600">
+</p>
+
 [![](https://img.shields.io/npm/dw/github-actions-wac.svg)](https://www.npmjs.com/package/github-actions-wac)
 [![](https://img.shields.io/npm/v/github-actions-wac.svg)](https://www.npmjs.com/package/github-actions-wac)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
