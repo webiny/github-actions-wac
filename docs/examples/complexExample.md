@@ -215,11 +215,7 @@ export const getEnvironmentVariables = (branch: string, overrides = {}) => {
         // Configs.
         NODE_OPTIONS: "--max_old_space_size=4096",
 
-        // By default, upon building the AWS Lambda code (wcp/backend/src), the code is NOT type-checked. But, we
-        // can actually enable type checking via the following environment variable. The reason why this is already
-        // not the default behaviour currently is that this feature hasn't yet been officially released by Webiny.
         WEBINY_ENV: branch,
-        WEBINY_ENABLE_TS_CHECKS: "true",
         ...overrides
     };
 };
