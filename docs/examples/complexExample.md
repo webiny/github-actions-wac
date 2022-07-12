@@ -1,4 +1,4 @@
-# Retrieving WCP URLs
+# Complex Example
 
 Exports three **Pull Requests (${branch})** workflows that consist of multiple jobs and steps, where each workflow depends on the target branch. At the end of the file, we also export the **Pull Requests (Closed)** workflow, which is triggered once a PR has been closed. 
 

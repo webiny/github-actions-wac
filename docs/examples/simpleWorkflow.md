@@ -1,4 +1,4 @@
-# Retrieving WCP URLs
+# Simple Workflow
 
 Exports a single workflow that consists of a couple of a single job and some steps.
 
