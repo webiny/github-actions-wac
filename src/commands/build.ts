@@ -43,7 +43,7 @@ export const build = async () => {
             const yamlWorkflowPath = path.join(".github", "workflows", `${name}.yml`);
             log(`Writing to ${relativePath(yamlWorkflowPath)}:`);
 
-            const content = jsYaml.dump(exportedWorkflows[name]);
+            const content = jsYaml.dump(exportedWorkflows[name], { noRefs: true });
             log("%s", `\n${content}`);
 
             fs.writeFileSync(yamlWorkflowPath, [TOP_YAML_WORKFLOW_COMMENT, content].join("\n"));
