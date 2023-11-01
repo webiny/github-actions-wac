@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce00e18c-c1e8-46ef-b506-2efcc96dce65" name="Changes" comment="ci: implement semantic release">
+    <list default="true" id="ce00e18c-c1e8-46ef-b506-2efcc96dce65" name="Changes" comment="chore: update yarn.lock">
+      <change afterPath="$PROJECT_DIR$/src/commands/validate.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/index.wac.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/index.wac.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/build.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/build.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +36,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="20v9x4duD1edyR2rX0Jog5O3rZD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,6 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "noRefs",
+    "last_opened_file_path": "/Users/adrian/dev/github-actions-wac/src/commands",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,7 +114,8 @@
       <workItem from="1657012060470" duration="2200000" />
       <workItem from="1657035400627" duration="4681000" />
       <workItem from="1657084368835" duration="1138000" />
-      <workItem from="1698759384052" duration="568000" />
+      <workItem from="1698759384052" duration="1678000" />
+      <workItem from="1698838448286" duration="2514000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit">
       <created>1656690553053</created>
@@ -246,7 +250,39 @@
       <option name="project" value="LOCAL" />
       <updated>1657085218773</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="chore: add types/node">
+      <option name="closed" value="true" />
+      <created>1698760006797</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1698760006797</updated>
+    </task>
+    <task id="LOCAL-00021" summary="chore: update `workspace.xml`">
+      <option name="closed" value="true" />
+      <created>1698760026275</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1698760026275</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fix: add `noRefs`">
+      <option name="closed" value="true" />
+      <created>1698760043626</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1698760043626</updated>
+    </task>
+    <task id="LOCAL-00023" summary="chore: update yarn.lock">
+      <option name="closed" value="true" />
+      <created>1698760173213</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1698760173213</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +309,11 @@
     <MESSAGE value="chore: update ignore" />
     <MESSAGE value="ci: update working dir" />
     <MESSAGE value="ci: implement semantic release" />
-    <option name="LAST_COMMIT_MESSAGE" value="ci: implement semantic release" />
+    <MESSAGE value="chore: add types/node" />
+    <MESSAGE value="chore: update `workspace.xml`" />
+    <MESSAGE value="fix: add `noRefs`" />
+    <MESSAGE value="chore: update yarn.lock" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update yarn.lock" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
