@@ -2,6 +2,7 @@
 import * as yargs from "yargs";
 import { build } from "./commands/build";
 import { watch } from "./commands/watch";
+import { validate } from "./commands/validate";
 
 yargs
     .scriptName("github-actions-wac")
@@ -17,5 +18,11 @@ yargs
         `Watches for changes in detected TypeScript ("*.wac.ts") workflow files and automatically generates YAML.`,
         {},
         watch
+    )
+    .command(
+        "validate",
+        `Ensures "*.wac.ts" files are in sync with generated YAML files.`,
+        {},
+        validate
     )
     .help().argv;
