@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce00e18c-c1e8-46ef-b506-2efcc96dce65" name="Changes" comment="wip: update to ESM">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/index.wac.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/index.wac.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/build.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/build.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/validate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/validate.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/watch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/watch.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createWorkflow.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/createWorkflow.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +148,7 @@
       <workItem from="1698759384052" duration="1678000" />
       <workItem from="1698838448286" duration="2514000" />
       <workItem from="1757678367004" duration="3119000" />
-      <workItem from="1758021467511" duration="2493000" />
+      <workItem from="1758021467511" duration="3702000" />
     </task>
     <task id="LOCAL-00001" summary="chore: init commit">
       <created>1656690553053</created>
@@ -330,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758022397797</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="wip: update to ESM">
+      <option name="closed" value="true" />
+      <created>1758024027182</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1758024027182</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

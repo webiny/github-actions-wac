@@ -11,9 +11,9 @@
     "chokidar": "^3.5.2",
     "cosmiconfig": "^7.0.1",
     "debug": "^4.3.4",
-    "fast-glob": "^3.2.11",
+    "fast-glob": "^3.3.3",
     "js-yaml": "^4.1.0",
-    "ts-node": "^10.8.1",
+    "tsx": "^4.20.5",
     "yargs": "^18.0.0"
   },
   "devDependencies": {
@@ -35,6 +35,9 @@
   "peerDependencies": {
     "typescript": "^5.9.2"
   },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "bin": {
     "ghawac": "./bin.js",
     "github-actions-wac": "./bin.js"
@@ -43,7 +46,7 @@
     "build": "rm -rf dist && swc src -d dist --source-maps --extensions '.ts' && tsc --emitDeclarationOnly --declaration",
     "watch": "swc src -d dist --source-maps --extensions '.ts' --watch",
     "prepare-dist-for-release": "cp README.md dist/README.md && cp package.json dist/package.json",
-    "generate-gh-actions-workflow-types": "ts-node scripts/generateGithubActionsWorkflowTypes.ts",
+    "generate-gh-actions-workflow-types": "tsx scripts/generateGithubActionsWorkflowTypes.ts",
     "github-actions-wac": "node dist/bin.js",
     "ghawac": "node dist/bin.js",
     "test": "jest"

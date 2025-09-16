@@ -1,4 +1,4 @@
-import { createWorkflow, NormalJob } from "../../src";
+import { createWorkflow, NormalJob } from "../../src/index.js";
 
 const defaultEnv = {
     NODE_OPTIONS: "--max_old_space_size=4096"
