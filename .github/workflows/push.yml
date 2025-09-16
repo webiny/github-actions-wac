@@ -3,7 +3,10 @@
 # and run "github-actions-wac build" (or "ghawac build") to regenerate this file.
 # For more information, run "github-actions-wac --help".
 name: Push to main branch
-'on': push
+'on':
+  push:
+    branches:
+      - main
 env:
   NODE_OPTIONS: '--max_old_space_size=4096'
 jobs:

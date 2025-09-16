@@ -24,7 +24,11 @@ const checkoutInstallBuildTest: NormalJob["steps"] = [
 
 export const push = createWorkflow({
     name: "Push to main branch",
-    on: "push",
+    on: {
+        push: {
+            branches: ["main"]
+        }
+    },
     env: defaultEnv,
     jobs: {
         buildTestRelease: {
