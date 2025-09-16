@@ -28,7 +28,7 @@
     "jest": "^28.1.2",
     "json-schema-to-typescript": "^11.0.1",
     "node-fetch": "^2.2.6",
-    "prettier": "^2.4.1",
+    "prettier": "^3.6.2",
     "ts-jest": "^28.0.5",
     "typescript": "^5.9.2"
   },

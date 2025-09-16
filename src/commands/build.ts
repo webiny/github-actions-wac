@@ -2,12 +2,12 @@ import * as fs from "fs";
 import * as path from "path";
 import jsYaml from "js-yaml";
 import debug from "debug";
-import { getWorkflowsPaths, clearImportCache, TOP_YAML_WORKFLOW_COMMENT } from "./utils";
+import { getWorkflowsPaths, clearImportCache, TOP_YAML_WORKFLOW_COMMENT } from "./utils.js";
 import * as tsNode from "ts-node";
 
 const log = debug("ghawac");
 
-const relativePath = p => path.relative(process.cwd(), p);
+const relativePath = (p: string) => path.relative(process.cwd(), p);
 
 let tsNodeRegistered = false;
 const registerTsNode = (options = {}) => {
