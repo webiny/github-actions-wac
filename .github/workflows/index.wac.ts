@@ -9,9 +9,9 @@ const checkoutInstallBuildTest: NormalJob["steps"] = [
         uses: "actions/setup-node@v2",
         with: { "node-version": 14 }
     },
-    { uses: "actions/checkout@v2" },
+    { uses: "actions/checkout@v4" },
     {
-        uses: "actions/cache@v2",
+        uses: "actions/cache@v4",
         with: {
             path: ".yarn/cache",
             key: "yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}"
@@ -48,7 +48,7 @@ export const push = createWorkflow({
 });
 
 export const pullRequests = createWorkflow({
-    name: "Push to main branch",
+    name: "Pull requests",
     on: "pull_request",
     env: defaultEnv,
     jobs: {
