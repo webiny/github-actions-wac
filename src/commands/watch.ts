@@ -1,6 +1,6 @@
 import * as path from "path";
 import { watch as chokidarWatch } from "chokidar";
-import { build } from "./build";
+import { build } from "./build.js";
 
 export const watch = async () => {
     const watcher = chokidarWatch([path.join(process.cwd(), ".github", "workflows", "**/*.ts")]);

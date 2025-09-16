@@ -2,26 +2,13 @@ import * as fs from "fs";
 import * as path from "path";
 import jsYaml from "js-yaml";
 import debug from "debug";
-import { getWorkflowsPaths, TOP_YAML_WORKFLOW_COMMENT } from "./utils";
-import * as tsNode from "ts-node";
+import { getWorkflowsPaths, TOP_YAML_WORKFLOW_COMMENT } from "./utils.js";
 
 const log = debug("ghawac");
 
-const relativePath = p => path.relative(process.cwd(), p);
-
-let tsNodeRegistered = false;
-const registerTsNode = (options = {}) => {
-    if (tsNodeRegistered) {
-        return;
-    }
-
-    tsNode.register({ ...options });
-    tsNodeRegistered = true;
-};
+const relativePath = (p: string) => path.relative(process.cwd(), p);
 
 export const validate = async () => {
-    registerTsNode();
-
     const workflowFilesPaths = getWorkflowsPaths();
     log(
         "Detected following workflow files:\n",

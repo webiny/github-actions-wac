@@ -1,5 +1,5 @@
 {
-  "exclude": [".*?\/__tests__\/.*"],
+  "exclude": [".*?/__tests__/.*"],
   "jsc": {
     "parser": {
       "syntax": "typescript"
@@ -11,6 +11,6 @@
     "baseUrl": "."
   },
   "module": {
-    "type": "commonjs"
+    "type": "es6"
   }
 }

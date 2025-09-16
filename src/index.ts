@@ -1,2 +1,2 @@
-export * from "./createWorkflow";
-export * from "./githubActionsWorkflow";
+export * from "./createWorkflow.js";
+export * from "./githubActionsWorkflow.js";

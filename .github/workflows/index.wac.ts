@@ -1,4 +1,4 @@
-import { createWorkflow, NormalJob } from "../../src";
+import { createWorkflow, NormalJob } from "../../src/index.js";
 
 const defaultEnv = {
     NODE_OPTIONS: "--max_old_space_size=4096"
@@ -9,9 +9,9 @@ const checkoutInstallBuildTest: NormalJob["steps"] = [
         uses: "actions/setup-node@v2",
         with: { "node-version": 14 }
     },
-    { uses: "actions/checkout@v2" },
+    { uses: "actions/checkout@v4" },
     {
-        uses: "actions/cache@v2",
+        uses: "actions/cache@v4",
         with: {
             path: ".yarn/cache",
             key: "yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}"
@@ -24,7 +24,11 @@ const checkoutInstallBuildTest: NormalJob["steps"] = [
 
 export const push = createWorkflow({
     name: "Push to main branch",
-    on: "push",
+    on: {
+        push: {
+            branches: ["main"]
+        }
+    },
     env: defaultEnv,
     jobs: {
         buildTestRelease: {
@@ -48,7 +52,7 @@ export const push = createWorkflow({
 });
 
 export const pullRequests = createWorkflow({
-    name: "Push to main branch",
+    name: "Pull requests",
     on: "pull_request",
     env: defaultEnv,
     jobs: {
